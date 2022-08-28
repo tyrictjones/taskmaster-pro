@@ -282,6 +282,13 @@ var auditTask = function(taskEl) {
 }
 
 
+setInterval(function() {
+  $('.card .list-group-item').each(function(index, el) {
+    auditTask(el);
+  })
+}, 1800000);
+
+
 // remove all tasks
 $("#remove-tasks").on("click", function() {
   for (var key in tasks) {
